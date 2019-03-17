@@ -1,4 +1,10 @@
-# Jeff's Blackjack Game - a Udemy Python Bootcamp exercise coded March, 2019
+"""
+Jeff's Blackjack Game
+
+I created this project as an exercise for Jose Portilla's Udemy Complete Python Bootcamp.
+There are logical bugs and other issues with it, but I'm leaving them for now to
+focus on other Python learning.  - Jeffrey Willits  03/16/19
+"""
 
 from subprocess import call
 import msvcrt
@@ -136,8 +142,8 @@ class Player:
             self.chips_wagered_str = '\n\tChips wagered: ' + str(self.bet)
 
         self.hand_str = ''
-        self.hand_status_str = ''
         if not self.game_status == 'LOST':
+            self.hand_status_str = ''
             for card in range(0, len(self.hand)):
                 self.hand_str = self.hand_str + ' ' + self.hand[card][0]
             self.status_str = f"{self.name}'s hand is {self.hand_soft_hard} with a value of {hand_val_str}.  "
@@ -306,6 +312,10 @@ def print_players(player_obj_lst_pass, num_players_pass, dealer_played_pass):
 call('cls', shell=True)
 print(f"\n\tJ E F F' S   B L A C K J A C K   G A M E  - a Python exercise coded March, 2019"
       f"\n\t"
+      f"\n\tI created this project as an exercise for the Complete Python Bootcamp on Udemy."
+      f"\n\tThere are logical bugs and other issues with it, but I'm leaving them for now to"
+      f"\n\tfocus on other Python learning.  - Jeffrey Willits  03/16/19"
+      f"\n\t"
       f"\n\tPlay with one to three players. You will be gambling and will start with ten chips."
       f"\n\t"
       f"\n\tThe object is to beat the automated dealer. This game is played with one deck of 52 cards."
@@ -471,8 +481,8 @@ while count_chips(player_obj_lst):
                 Jeff's blackjack game!")
         else:
             print(
-                f"\n\tHey, {player_obj_lst[1].name} and {player_obj_lst[2].name}, and {player_obj_lst[2].name}, thanks" \
-                    f" for playing Jeff's blackjack game!")
+                f"\n\tHey, {player_obj_lst[1].name} and {player_obj_lst[2].name}, and {player_obj_lst[2].name}, thanks"
+                f"\n\tfor playing Jeff's blackjack game!")
         print()
 # Pause requiring 'return' keypress for a new hand for players that have chips (press 'Q' or escape to quit)
 while True:
